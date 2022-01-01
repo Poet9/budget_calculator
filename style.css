@@ -1,0 +1,244 @@
+* {
+  margin: 0px;
+  padding : 0px;
+  box-sizing: border-box;
+}
+.moneyCalculator::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  color: #555;
+  font-family: Open Sans;
+  font-size: 16px;
+  position: relative;
+  height: 100vh;
+  font-weight: 400;
+}
+.right{float: right;}
+.red {color: #780000 !important;}
+.focus_red:focus{border: 1px solid #C80000 !important;}
+
+/******************************************
+************** result style**************** 
+*******************************************/
+#resultDiv{
+  height: 40vh;
+  background-image:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)) ,url("Pcket watch blurry.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.budget{
+  position: absolute;
+  width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;  
+}
+.budgetTitle{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+
+
+/* .moneyCalculator{
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 10px 40%;
+  color: white;
+} */
+
+#budget{
+  font-weight: 300;
+  font-size: 46px;
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.budgetInc,
+.budgetExp{
+  padding: 12px;
+  text-transform: uppercase;
+
+}
+.budgetInc{
+  margin-bottom: 10px;
+  background-color: #2894B5;
+}
+.budgetExp{background-color: #FF5050;}
+.budgetInc_text,
+.budgetExp_text{
+  float: left;
+  font-size: 13px;
+  color: #444;
+  margin-top: 2px;
+}
+#incomeResult,
+#outcomeResult{
+  letter-spacing: 1px;
+  float: left;
+}
+.budgetInc_percentage,
+.budgetExp_percentage{
+  float: left;
+  width: 34px;
+  font-size: 11px;
+  padding: 3px 0;
+  margin-left: 10px;
+}
+.budgetExp_percentage{
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 3px;
+}
+/********************************************
+***************BOTTOM PART*******************
+*********************************************/
+          /*input fields*/
+#inputDiv{
+  padding: 14px;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #f7f7f7;
+  margin : 0 auto;
+  text-align: center;
+  }
+  #inOrOut{
+    width: 55px;
+    height: 44px;
+    border: 1px solid #e7e7e7;
+    font-size:18px;
+    color:inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+    cursor: pointer;
+    
+  }
+.charges{
+  border: 1px solid #e7e7e7;
+  background-color: #fff;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition:border 0.3s;
+}
+#nameIt{width:400px;}
+#value{width: 100px;}
+#device{width: 50px;}
+
+#dispense{
+  font-size: 35px;
+  background: none;
+  border: none;
+  color: #28B9B5;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.1;
+  margin-left: 10px;
+}
+#dispense:active{transform: translateY(2px);}
+#inOrOut:focus,
+.charges:focus{
+  outline: none;
+  border : 1px solid #28B9B5;
+}
+#dispense:focus{outline:none;}
+
+                     /* LISTS */
+ .container{
+   width: 80%;
+   margin:60px auto;
+ }
+ 
+#incomeDispense{
+  float: left;
+  width: 45%;
+  margin-right: 10%;
+}
+#outcomeDispense{
+  float: left;
+  width: 45%;
+}
+p{
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+#inText{color: #28B9B5;}
+#outText{color: #FF5050;}
+
+.item{
+  padding: 13px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.item:first-child{border-top: 1px solid #e7e7e7;}
+.item:nth-child(even){background-color: #f7f7f7;}
+
+.item_description{float: left;}
+.item_value{
+  float: left;
+  transition: transform 0.3s;
+}
+.pourcentage_expense{
+  float: left;
+  margin-left: 20px;
+  transition: transform 0.3s;
+  font-size: 11px;
+  background-color: #FFDAD9;
+  padding: 3px;
+  border-radius: 3px;
+  width: 32px;
+  text-align: center;
+}
+#incomeDispense .item_value,
+#incomeDispense .delete_item_btn{
+  color: #28B9B5;
+}
+
+#outcomeDispense .item_value,
+#outcomeDispense .pourcentage_expense,
+#outcomeDispense .delete_item_btn{
+  color: #FF5050;
+}
+.delete_item{float: left;}
+.delete_item_btn{
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+.delete_item_btn:focus { outline: none; }
+.delete_item_btn:active { transform: translateY(2px);}
+
+.item:hover .delete_item_btn{ display: block;}
+.item:hover .item_value{transform: translateX(-20px);}
+.item:hover .pourcentage_expense{transform: translateX(-20px);}
+
+.unpaid{
+  background-color: #FFDAD9 !important;
+  cursor: pointer;
+  color: #FF5050;
+}
+.unpaid .pourcentage_expense{box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1);}
+.unpaid:hover .item_description{font-weight: 900;}
+/************************************************
+******************Adding stuff*******************
+*************************************************/ 

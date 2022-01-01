@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Savings</title>
+    <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+    <div id="resultDiv">
+      <div class="budget">
+        <p1 class="budgetTitle" >Available budget 
+          <span class="currentDate">%holo%</span>
+        </p1>
+      <div id="budget" class="moneyCalculator">0.00</div>
+                        <!--all income div -->
+        <div class="budgetInc moneyCalculator">
+          <span class= "budgetInc_text">Income</span>
+          <div class="right">
+            <span id="incomeResult">+ 0.00</span>
+            <span class="budgetInc_percentage">&nbsp;</span>
+          </div>
+        </div>
+                      <!-- all expenses DIV -->
+        <div class="budgetExp moneyCalculator"> 
+          <span class="budgetExp_text">Expenses</span>
+          <div class="right moneyCalculator">
+            <span  id="outcomeResult">- 0.00</span>
+            <span class="budgetExp_percentage">45%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="inputDiv">
+      <select id="inOrOut">
+        <option value="inc" id="income" selected>+</option>
+        <option value="exp" id="outcome">-</option>
+      </select>
+      <input class= "charges" type="text" id="nameIt" placeholder="Add discription">
+      <input class= "charges" type="number" id="value" placeholder="Value">
+      <input class= "charges" type="text" id="device" placeholder="$">
+      <button id="dispense">
+        <i class="ion-ios-checkmark-outline"></i>
+      </button>
+    </div>
+
+    <div class="container">
+      <div id="incomeDispense">
+        <P id="inText">Income</P>
+      </div>
+      <div id="outcomeDispense">
+        <P id="outText" >Outcome</P>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
